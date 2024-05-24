@@ -3,41 +3,92 @@
 @tailwind utilities;
 
 
-.social-button {
-  background-color: white;
-  color: black;
-  text-decoration: none;
-  border-radius: 60px;
-  height: 32px;
-  display: inline-flex;
-  align-items: center;
-  overflow: hidden;
-  width: auto;
-  max-width: 32px;
-  -webkit-transition: max-width 1s;
-  transition: max-width 1s;
-}
-
-.social-button:hover {
-  max-width: 300px;
-}
-
-.social-button:hover {
-  .text {
-      display: block;
-  }
-}
-
-.icon {
-  font-size: 16px;
-  margin-right: 15px; 
-  margin: 0px 8px;
+.Btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+          box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+        
+ 
 }
 
+/* plus sign */
+.sign {
+  width: 100%;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sign svg {
+  width: 30px;
+}
+.sign svg path {
+  fill: white;
+}
+/* text */
 .text {
-  white-space: nowrap;
-  padding-right: 15px;
-  display: none;
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+}
+/* hover effect on button width */
+.Btn:hover {
+  width: 150px;
+  border-radius: 40px;
+  padding: 5px;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  padding: 10px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  -webkit-transform: translate(2px ,2px);
+      -ms-transform: translate(2px ,2px);
+          transform: translate(2px ,2px);
 }

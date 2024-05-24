@@ -12,8 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="">
-        <div className=" ">
+      <body className="relative gradient-box bg-gradient-to-br from-[#030005] via-[#6300CD] to-[#E1AEFD] min-h-screen">
+        <div className="absolute bottom-20 left-3 ">
           <Navbar></Navbar>
         </div>
         {children}
