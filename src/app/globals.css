@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body{
+        font-family: "Nunito Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100,
+          "YTLC" 500;     
+}
 
 .Btn {
   display: -webkit-box;
@@ -63,7 +74,7 @@
   -webkit-transition-duration: .3s;
           transition-duration: .3s;
 }
-/* hover effect on button width */
+/* hover effect on button2 width */
 .Btn:hover {
   width: 150px;
   border-radius: 40px;
@@ -78,7 +89,7 @@
           transition-duration: .3s;
   padding: 10px;
 }
-/* hover effect button's text */
+/* hover effect button2's text */
 .Btn:hover .text {
   opacity: 1;
   width: 70%;
@@ -86,9 +97,70 @@
           transition-duration: .3s;
   padding-right: 10px;
 }
-/* button click effect*/
+/* button2 click effect*/
 .Btn:active {
   -webkit-transform: translate(2px ,2px);
       -ms-transform: translate(2px ,2px);
           transform: translate(2px ,2px);
 }
+
+.button2 {
+        width: 10em;
+        position: relative;
+        height: 3.5em;
+        border: 3px ridge #E1AEFD;
+        outline: none;
+        background-color: transparent;
+        color: white;
+        transition: 1s;
+        border-radius: 0.3em;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      
+      .button2::after {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 3%;
+        width: 95%;
+        height: 40%;
+   
+        transition: 0.5s;
+        transform-origin: center;
+      }
+      
+      .button2::before {
+        content: "";
+        transform-origin: center;
+        position: absolute;
+        top: 80%;
+        left: 3%;
+        width: 95%;
+        height: 40%;
+   
+        transition: 0.5s;
+      }
+      
+      .button2:hover::before, button2:hover::after {
+        transform: scale(0)
+      }
+      
+      .button2:hover {
+        box-shadow: inset 0px 0px 25px #E1AEFD;
+      }
+
+
+      @keyframes spin-slow {
+        0% {
+          transform: rotate(0deg) translate(100px) rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg) translate(100px) rotate(-360deg);
+        }
+      }
+      
+      .animate-spin-slow {
+        animation: spin-slow infinite linear;
+      }
