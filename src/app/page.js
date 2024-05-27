@@ -11,6 +11,27 @@ import {
 } from "react-icons/fa";
 import profile from "../../public/Assets/PROFILE.png";
 import Baits from "../../public/logo/BAITS.png";
+import Timeline from "@/Components/HomeComponent/Timeline";
+
+const experiences = [
+  {
+    companyName: "Bangladesh Associate Of IT Solutions",
+    position: "Software Developer",
+    duration: "November 2023 - Present",
+    technologies:
+      "PHP, Laravel, Node JS, Express JS , React, Next JS, MongoDB, MySQL, PostgreSQL",
+    address:
+      " Alba Tower , 6th floor , Pallabi, Mirpur , Dhaka Bangladesh (Onsite)",
+  },
+  {
+    companyName: "Swachh Akshar(Inginious Solutions)",
+    position: "MERN Stack Developer",
+    duration: "February 2023 - October 2023",
+    technologies:
+      "Node JS, Express JS , React, Next JS, MongoDB, MySQL, PostgreSQL",
+    address: " 145, Zone 2, GRP Colony, MP Nagar, Bhopal, MP -4620001 (Remote)",
+  },
+];
 export default function Home() {
   const logos = [
     { src: "/logo/React.webp", alt: "React Logo" },
@@ -101,68 +122,16 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div>
-        <h1 className="text-3xl text-white mx-10">Experiences : _______</h1>
-        <div className="mx-10 mt-5 pb-5">
-          <div className="md:flex justify-around items-center">
-            <div>
-              <h1 className="text-white text-2xl font-semibold">
-                Company Name: Bangladesh Associate of IT Solutions (BAITS)
-              </h1>
-              <h3 className="text-xl font-semibold text-white mt-1">
-                Location: Alba Tower , 6th floor , Pallabi, Mirpur , Dhaka
-                Bangladesh (Onsite)
-              </h3>
-              <h3 className="text-xl font-semibold text-white mt-1">
-                Position: Software Developer
-              </h3>
-              <p className="text-white mt-1">Start Date: November 2023</p>
-              <p className="text-white mt-1">End Date: Currently work here</p>
-              <p className="text-white mt-1">
-                Technology: PHP, Laravel, Node JS, Express JS , React, Next JS,
-                MongoDB, MySQL, PostgreSQL
-              </p>
-            </div>
-            <div>
-              <Image
-                src={Baits}
-                ref={Baits}
-                height={200}
-                width={300}
-                alt="Profile"
-              ></Image>
-            </div>
-          </div>
-          <div className="mt-10 md:flex justify-around items-center">
-          
-            <div>
-              <h1 className="text-white text-2xl font-semibold">
-                Company Name: Swachh Akshar(Inginious Solutions)
-              </h1>
-              <h3 className="text-xl font-semibold text-white mt-1">
-                145, Zone 2, GRP Colony, MP Nagar, Bhopal, MP -4620001 (Remote)
-              </h3>
-              <h3 className="text-xl font-semibold text-white mt-1">
-                Position: MERN Stack Developer (Internship)
-              </h3>
-              <p className="text-white mt-1">Start Date: February 2023</p>
-              <p className="text-white mt-1">End Date: October 2023</p>
-              <p className="text-white mt-1">
-                Technology: PHP, Laravel, Node JS, Express JS , React, Next JS,
-                MongoDB, MySQL, PostgreSQL
-              </p>
-            </div>
-            <div>
-              <Image
-                src={Baits}
-                ref={Baits}
-                height={200}
-                width={300}
-                alt="Profile"
-              ></Image>
-            </div>
-          </div>
-        </div>
+      <div className="mt-20 pb-10">
+        <h5 className="text-xl text-gray-300 text-center">
+          What I Have Done So Far
+        </h5>
+        <h1 className="text-5xl text-center font-bold text-white mt-2">
+          ____Work Experiences____
+        </h1>
+      </div>
+      <div className="mx-5 lg:mx-44 py-10">
+        <Timeline></Timeline>
       </div>
     </div>
   );
