@@ -1,20 +1,19 @@
 const experiences = [
   {
     companyName: "Bangladesh Associate Of IT Solutions",
-    position: "Software Developer",
+    position: "Software Developer (Onsite)",
     duration: "November 2023 - Present",
     technologies:
       "PHP, Laravel, Node JS, Express JS , React, Next JS, MongoDB, MySQL, PostgreSQL",
-    address:
-      " Alba Tower , 6th floor , Pallabi, Mirpur , Dhaka Bangladesh (Onsite)",
+    address: " Alba Tower , 6th floor , Pallabi, Mirpur , Dhaka Bangladesh ",
   },
   {
     companyName: "Swachh Akshar(Inginious Solutions)",
-    position: "MERN Stack Developer",
+    position: "MERN Stack Developer  (Remote)",
     duration: "February 2023 - October 2023",
     technologies:
       "Node JS, Express JS , React, Next JS, MongoDB, MySQL, PostgreSQL",
-    address: " 145, Zone 2, GRP Colony, MP Nagar, Bhopal, MP -4620001 (Remote)",
+    address: "MP Nagar, Bhopal, MP -4620001 , India",
   },
 ];
 const Timeline = () => {
@@ -36,6 +35,9 @@ const Timeline = () => {
             <h3 className="text-lg font-semibold text-white dark:text-white">
               {data?.companyName}
             </h3>
+            <p className=" text-base font-normal text-white dark:text-gray-400">
+              Address: {data?.address}
+            </p>
             <p className="mb-4 text-base font-normal text-white dark:text-gray-400">
               Technologies: {data?.technologies}
             </p>

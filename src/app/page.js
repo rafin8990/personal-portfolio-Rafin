@@ -27,7 +27,21 @@ export default function Home() {
   ];
   return (
     <div>
-      <div className="md:flex items-center justify-center ">
+      <div className="area">
+        <ul className="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div className="pt-10 pb-5 md:py-32 md:flex items-center justify-center ">
         <div className="order-2 flex justify-center md:ml-10  md:mt-0">
           <Image
             src={profile}
@@ -105,16 +119,18 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="mt-20 pb-10">
-        <h5 className="text-xl text-black text-center">
-          What I Have Done So Far
-        </h5>
-        <h1 className="text-3xl md:text-5xl text-center font-bold text-white mt-2">
-          ____Work Experiences____
-        </h1>
-      </div>
-      <div className="mx-5 lg:mx-44 py-10">
-        <Timeline></Timeline>
+      <div className=" gradient-box bg-gradient-to-br from-[#212670] via-[#7e05ff] to-[#030005]  py-10">
+        <div className=" pt-5 pb-10 ">
+          <p className=" text-white text-sm text-center">
+            What I Have Done So Far
+          </p>
+          <h1 className="text-2xl md:text-5xl text-center font-bold text-white mt-2">
+            ____Work Experiences____
+          </h1>
+        </div>
+        <div className="px-5 md:px-10 lg:px-20">
+          <Timeline></Timeline>
+        </div>
       </div>
     </div>
   );

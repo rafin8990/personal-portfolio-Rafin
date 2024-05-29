@@ -12,8 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="relative gradient-box bg-gradient-to-br from-[#E1AEFD] via-[#7e05ff] to-[#030005] min-h-screen">
-        <div className=" sticky top-8 ">
+      <body className="relative ">
+        <div className="absolute top-8 ">
           <Navbar></Navbar>
         </div>
         {children}
